@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "grafos-python"
+version = "1.0.0"
+description = "Grafo com lista de adjacência e algoritmos clássicos (BFS, DFS, Dijkstra, Kahn) em Python puro."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [{ name = "sidsidoso" }]
+keywords = ["grafos", "dijkstra", "bfs", "dfs", "ordenacao-topologica", "estrutura-de-dados"]
+
+[project.urls]
+Repository = "https://github.com/sidsidoso/grafos-python"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B", "SIM"]
